@@ -16,12 +16,14 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
+import utils.ExcelReader;
+
 //initializors
 public class TestBase {
 	/*
 	 * Webdriver  - done
 	 * Properties - done
-	 * Logs       - 
+	 * Logs       - done
 	 * 
 	 */
 	
@@ -30,6 +32,7 @@ public class TestBase {
 	public static Properties OR = new Properties();
 	public static FileInputStream fis;
 	public static Logger log = Logger.getLogger("devpinoyLogger");
+	public static ExcelReader excel = new ExcelReader(System.getProperty("user.dir") + "\\src\\test\\resources\\excel\\testdata.xlsx");
 	
 	@BeforeSuite
 	public void setup() {
