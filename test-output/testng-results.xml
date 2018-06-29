@@ -1,27 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-06-29T16:46:07Z" name="Default suite" finished-at="2018-06-29T16:46:10Z" duration-ms="3118">
+  <suite started-at="2018-06-29T17:11:30Z" name="Data Driven Basics" finished-at="2018-06-29T17:11:40Z" duration-ms="10205">
     <groups>
     </groups>
-    <test started-at="2018-06-29T16:46:07Z" name="Default test" finished-at="2018-06-29T16:46:10Z" duration-ms="3118">
-      <class name="base.TestBase">
-        <test-method is-config="true" signature="setup()[pri:0, instance:base.TestBase@d9345cd]" started-at="2018-06-29T19:46:01Z" name="setup" finished-at="2018-06-29T19:46:07Z" duration-ms="5930" status="PASS">
+    <test started-at="2018-06-29T17:11:30Z" name="LoginTest" finished-at="2018-06-29T17:11:40Z" duration-ms="10205">
+      <class name="testcases.LoginTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.LoginTest@4efac082]" started-at="2018-06-29T20:11:24Z" name="setup" finished-at="2018-06-29T20:11:30Z" duration-ms="5853" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:base.TestBase@d9345cd]" started-at="2018-06-29T19:46:10Z" name="teardown" finished-at="2018-06-29T19:46:11Z" duration-ms="859" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- base.TestBase -->
-      <class name="testcases.LoginTest">
-        <test-method signature="loginAsBankManager()[pri:0, instance:testcases.LoginTest@2d710f1a]" started-at="2018-06-29T19:46:07Z" name="loginAsBankManager" finished-at="2018-06-29T19:46:10Z" duration-ms="3100" status="PASS">
+        <test-method signature="loginAsBankManager()[pri:0, instance:testcases.LoginTest@4efac082]" started-at="2018-06-29T20:11:30Z" name="loginAsBankManager" finished-at="2018-06-29T20:11:40Z" duration-ms="10186" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Login Not Succesful expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Login Not Succesful expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at testcases.LoginTest.loginAsBankManager(LoginTest.java:16)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAsBankManager -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testcases.LoginTest@4efac082]" started-at="2018-06-29T20:11:40Z" name="teardown" finished-at="2018-06-29T20:11:41Z" duration-ms="942" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
       </class> <!-- testcases.LoginTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- LoginTest -->
+  </suite> <!-- Data Driven Basics -->
 </testng-results>
