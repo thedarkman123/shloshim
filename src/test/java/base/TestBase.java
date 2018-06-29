@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -15,10 +16,18 @@ import org.testng.annotations.BeforeSuite;
 
 //initializors
 public class TestBase {
+	/*
+	 * Webdriver  - done
+	 * Properties - done
+	 * Logs       - 
+	 * 
+	 */
+	
 	public static WebDriver driver;
 	public static Properties config = new Properties();
 	public static Properties OR = new Properties();
 	public static FileInputStream fis;
+	public static Logger log = Logger.getLogger("devpinoyLogger");
 	
 	@BeforeSuite
 	public void setup() {
@@ -31,6 +40,7 @@ public class TestBase {
 			}
 			try {
 				config.load(fis);
+				log.debug("config file loaded");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -43,6 +53,7 @@ public class TestBase {
 			}
 			try {
 				OR.load(fis);
+				log.debug("Or file loaded");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -56,12 +67,15 @@ public class TestBase {
 		} else if(config.getProperty("browser").equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\chromedriver.exe");
 			driver = new ChromeDriver();
+			log.debug("Chrome launched");
 		} else {
 			System.setProperty("webdriver.ie.driver",System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
 		}
 		
-		driver.get(config.getProperty("testsiteurl"));
+		String testSiteUrl = config.getProperty("testsiteurl");
+		driver.get(testSiteUrl);
+		log.debug("Navigated to : " + testSiteUrl );
 		driver.manage()
 		      .window()
 		      .maximize();
@@ -77,6 +91,7 @@ public class TestBase {
 		if (driver != null) {
 			driver.quit();
 			System.out.println("we are done mate");
+			log.debug("test execution completed!!! ");
 		}
 		
 	}
