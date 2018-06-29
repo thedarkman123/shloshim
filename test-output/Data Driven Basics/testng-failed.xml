@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Data Driven Basics]" guice-stage="DEVELOPMENT">
+  <test name="LoginTest(failed)">
+    <classes>
+      <class name="testcases.LoginTest">
+        <methods>
+          <include name="setup"/>
+          <include name="loginAsBankManager"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- testcases.LoginTest -->
+    </classes>
+  </test> <!-- LoginTest(failed) -->
+</suite> <!-- Failed suite [Data Driven Basics] -->
