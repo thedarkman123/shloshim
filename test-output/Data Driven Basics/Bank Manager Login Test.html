@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Bank Manager Login Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Jun 30 14:26:47 IDT 2018</td>
+<td>Started on:</td><td>Sat Jun 30 18:24:39 IDT 2018</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (305 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (326 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
@@ -76,17 +76,48 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='testcases.BankManagerLoginTest.loginAsBankManager()'><b>loginAsBankManager</b><br>Test class: testcases.BankManagerLoginTest<br/>
-<a href="#Output-770950500" onClick='toggleBox("Output-770950500", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-673367807" onClick='toggleBox("Output-673367807", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-770950500" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-770950500">
-Loggin Succesfully executed<br/>
-<a href="https://simgbb.com/images/logo.png">Screenshot</a><br/>
+<a href="#Output-673367807" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-673367807">
+Capturing Screenshot<br/>
+<a target="_blank" href="https://simgbb.com/images/logo.png">Screenshot</a><br/>
 </div>
 </td>
-<td></td>
+<td><div><pre>java.lang.AssertionError: Login not succesfull
+	at testcases.BankManagerLoginTest.loginAsBankManager(BankManagerLoginTest.java:22)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace673367807", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace673367807'><pre>java.lang.AssertionError: Login not succesfull
+	at org.testng.Assert.fail(Assert.java:93)
+	at testcases.BankManagerLoginTest.loginAsBankManager(BankManagerLoginTest.java:22)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
 <td>0</td>
-<td>testcases.BankManagerLoginTest@338494fa</td></tr>
+<td>testcases.BankManagerLoginTest@505a9d7c</td></tr>
 </table><p>
 </body>
 </html>

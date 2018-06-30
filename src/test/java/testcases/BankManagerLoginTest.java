@@ -12,15 +12,13 @@ public class BankManagerLoginTest extends TestBase{
 	@Test
 	public void loginAsBankManager() throws InterruptedException {
 		//to handle the text as html
-		System.setProperty("org.uncommons.reportng.escape-output", "false");
+		
 		log.debug("Inside Login Test");
 		driver.findElement(By.cssSelector(OR.getProperty("bmlBtn"))).click();
 		
 		Assert.assertTrue(isElementPresent(By.cssSelector(OR.getProperty("addCustBtn"))),"Login Not Succesful");
+		log.debug("Login Successfully Executed");
 		
-		log.debug("Loggin Succesfully executed");
-		Reporter.log("Loggin Succesfully executed");
-		
-		Reporter.log("<a target=\"_blank\" href=\"https://simgbb.com/images/logo.png\">Screenshot</a>");
+		//Assert.fail("Login not succesfull");
 	}
 } 
