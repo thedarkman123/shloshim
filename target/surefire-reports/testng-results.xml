@@ -1,91 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
-    <line>
-      <![CDATA[Capturing Screenshot]]>
-    </line>
-    <line>
-      <![CDATA[<a target="_blank" href="Sat_Jun_30_20_13_03_IDT_2018.jpg">Screenshot</a>]]>
-    </line>
-    <line>
-      <![CDATA[<a target="_blank" href="Sat_Jun_30_20_13_03_IDT_2018.jpg"><img src="Sat_Jun_30_20_13_03_IDT_2018.jpg" width=200 height=200 ></a>]]>
-    </line>
-    <line>
-      <![CDATA[Capturing Screenshot]]>
-    </line>
-    <line>
-      <![CDATA[<a target="_blank" href="Sat_Jun_30_20_13_04_IDT_2018.jpg">Screenshot</a>]]>
-    </line>
-    <line>
-      <![CDATA[<a target="_blank" href="Sat_Jun_30_20_13_04_IDT_2018.jpg"><img src="Sat_Jun_30_20_13_04_IDT_2018.jpg" width=200 height=200 ></a>]]>
-    </line>
   </reporter-output>
-  <suite name="Data Driven Basics" duration-ms="1648" started-at="2018-06-30T17:13:02Z" finished-at="2018-06-30T17:13:04Z">
+  <suite name="Data Driven Basics" duration-ms="3399" started-at="2018-06-30T17:49:45Z" finished-at="2018-06-30T17:49:48Z">
     <groups>
     </groups>
-    <test name="Bank Manager Login Test" duration-ms="726" started-at="2018-06-30T17:13:02Z" finished-at="2018-06-30T17:13:03Z">
+    <test name="Bank Manager Login Test" duration-ms="628" started-at="2018-06-30T17:49:45Z" finished-at="2018-06-30T17:49:46Z">
       <class name="testcases.BankManagerLoginTest">
-        <test-method status="FAIL" signature="loginAsBankManager()[pri:0, instance:testcases.BankManagerLoginTest@139982de]" name="loginAsBankManager" duration-ms="306" started-at="2018-06-30T20:13:02Z" finished-at="2018-06-30T20:13:02Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Login not succesfull]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Login not succesfull
-	at org.testng.Assert.fail(Assert.java:93)
-	at testcases.BankManagerLoginTest.loginAsBankManager(BankManagerLoginTest.java:22)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="loginAsBankManager()[pri:0, instance:testcases.BankManagerLoginTest@1ba9117e]" name="loginAsBankManager" duration-ms="294" started-at="2018-06-30T20:49:45Z" finished-at="2018-06-30T20:49:45Z">
           <reporter-output>
-            <line>
-              <![CDATA[Capturing Screenshot]]>
-            </line>
-            <line>
-              <![CDATA[<a target="_blank" href="Sat_Jun_30_20_13_03_IDT_2018.jpg">Screenshot</a>]]>
-            </line>
-            <line>
-              <![CDATA[<a target="_blank" href="Sat_Jun_30_20_13_03_IDT_2018.jpg"><img src="Sat_Jun_30_20_13_03_IDT_2018.jpg" width=200 height=200 ></a>]]>
-            </line>
           </reporter-output>
         </test-method> <!-- loginAsBankManager -->
       </class> <!-- testcases.BankManagerLoginTest -->
     </test> <!-- Bank Manager Login Test -->
-    <test name="Add Customer Test" duration-ms="892" started-at="2018-06-30T17:13:03Z" finished-at="2018-06-30T17:13:04Z">
+    <test name="Add Customer Test" duration-ms="2744" started-at="2018-06-30T17:49:46Z" finished-at="2018-06-30T17:49:48Z">
       <class name="testcases.AddCustomerTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.AddCustomerTest@26794848]" name="setup" is-config="true" duration-ms="7567" started-at="2018-06-30T20:12:55Z" finished-at="2018-06-30T20:13:02Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.AddCustomerTest@193f604a]" name="setup" is-config="true" duration-ms="5930" started-at="2018-06-30T20:49:39Z" finished-at="2018-06-30T20:49:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="addCustomer(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.AddCustomerTest@26794848]" name="addCustomer" duration-ms="508" started-at="2018-06-30T20:13:03Z" data-provider="getData" finished-at="2018-06-30T20:13:03Z">
+        <test-method status="PASS" signature="addCustomer(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.AddCustomerTest@193f604a]" name="addCustomer" duration-ms="2644" started-at="2018-06-30T20:49:46Z" data-provider="getData" finished-at="2018-06-30T20:49:48Z">
           <params>
             <param index="0">
               <value>
@@ -108,58 +42,10 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[yay]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: yay
-	at org.testng.Assert.fail(Assert.java:93)
-	at testcases.AddCustomerTest.addCustomer(AddCustomerTest.java:25)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
-            <line>
-              <![CDATA[Capturing Screenshot]]>
-            </line>
-            <line>
-              <![CDATA[<a target="_blank" href="Sat_Jun_30_20_13_04_IDT_2018.jpg">Screenshot</a>]]>
-            </line>
-            <line>
-              <![CDATA[<a target="_blank" href="Sat_Jun_30_20_13_04_IDT_2018.jpg"><img src="Sat_Jun_30_20_13_04_IDT_2018.jpg" width=200 height=200 ></a>]]>
-            </line>
           </reporter-output>
         </test-method> <!-- addCustomer -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.AddCustomerTest@26794848]" name="teardown" is-config="true" duration-ms="1049" started-at="2018-06-30T20:13:04Z" finished-at="2018-06-30T20:13:05Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.AddCustomerTest@193f604a]" name="teardown" is-config="true" duration-ms="1017" started-at="2018-06-30T20:49:48Z" finished-at="2018-06-30T20:49:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
