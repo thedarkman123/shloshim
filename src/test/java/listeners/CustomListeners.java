@@ -37,7 +37,7 @@ public class CustomListeners implements ITestListener{
 		}
 		Reporter.log("Capturing Screenshot");	
 		Reporter.log("<a target=\"_blank\" href=\""+ TestUtil.screenshotName + "\">Screenshot</a>");
-		Reporter.log("<a target=\"_blank\" href=\""+ TestUtil.screenshotName + "\"><img src=\""+ TestUtil.screenshotName + "\" width=200 height=200></a>");
+		Reporter.log("<a target=\"_blank\" href=\""+ TestUtil.screenshotName + "\"><img src=\""+ TestUtil.screenshotName + "\" width=200 height=200 ></a>");
 	}
 
 	public void onTestSkipped(ITestResult arg0) {

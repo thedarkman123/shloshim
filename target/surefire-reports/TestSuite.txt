@@ -1,9 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 12.603 sec <<< FAILURE! - in TestSuite
-loginAsBankManager(testcases.BankManagerLoginTest)  Time elapsed: 0.297 sec  <<< FAILURE!
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 11.731 sec <<< FAILURE! - in TestSuite
+loginAsBankManager(testcases.BankManagerLoginTest)  Time elapsed: 0.312 sec  <<< FAILURE!
 java.lang.AssertionError: Login not succesfull
 	at org.testng.Assert.fail(Assert.java:93)
 	at testcases.BankManagerLoginTest.loginAsBankManager(BankManagerLoginTest.java:22)
+
+addCustomer(testcases.AddCustomerTest)  Time elapsed: 0.508 sec  <<< FAILURE!
+java.lang.AssertionError: yay
+	at org.testng.Assert.fail(Assert.java:93)
+	at testcases.AddCustomerTest.addCustomer(AddCustomerTest.java:25)
 

@@ -17,4 +17,15 @@
       </class> <!-- testcases.BankManagerLoginTest -->
     </classes>
   </test> <!-- Bank Manager Login Test(failed) -->
+  <test name="Add Customer Test(failed)">
+    <classes>
+      <class name="testcases.AddCustomerTest">
+        <methods>
+          <include name="addCustomer" invocation-numbers="0"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- testcases.AddCustomerTest -->
+    </classes>
+  </test> <!-- Add Customer Test(failed) -->
 </suite> <!-- Failed suite [Data Driven Basics] -->

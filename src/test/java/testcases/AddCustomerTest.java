@@ -22,11 +22,14 @@ public class AddCustomerTest extends TestBase {
 		
 		driver.findElement(By.cssSelector(OR.getProperty("postcode"))).sendKeys(postCode);
 		
+//		Assert.fail("yay");
 		driver.findElement(By.cssSelector(OR.getProperty("addbtn"))).click();	
+		
 		
 		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 		
 		Assert.assertTrue(alert.getText().contains(alertText));
+		
 		Thread.sleep(2000);
 		
 		alert.accept();
