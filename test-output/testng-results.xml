@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-06-30T08:22:34Z" name="Data Driven Basics" finished-at="2018-06-30T08:22:37Z" duration-ms="3105">
+  <suite started-at="2018-06-30T08:50:56Z" name="Data Driven Basics" finished-at="2018-06-30T08:50:59Z" duration-ms="3259">
     <groups>
     </groups>
-    <test started-at="2018-06-30T08:22:34Z" name="Bank Manager Login Test" finished-at="2018-06-30T08:22:34Z" duration-ms="307">
+    <test started-at="2018-06-30T08:50:56Z" name="Bank Manager Login Test" finished-at="2018-06-30T08:50:56Z" duration-ms="305">
       <class name="testcases.BankManagerLoginTest">
-        <test-method signature="loginAsBankManager()[pri:0, instance:testcases.BankManagerLoginTest@74a6a609]" started-at="2018-06-30T11:22:34Z" name="loginAsBankManager" finished-at="2018-06-30T11:22:34Z" duration-ms="294" status="PASS">
+        <test-method signature="loginAsBankManager()[pri:0, instance:testcases.BankManagerLoginTest@338494fa]" started-at="2018-06-30T11:50:56Z" name="loginAsBankManager" finished-at="2018-06-30T11:50:56Z" duration-ms="288" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAsBankManager -->
       </class> <!-- testcases.BankManagerLoginTest -->
     </test> <!-- Bank Manager Login Test -->
-    <test started-at="2018-06-30T08:22:34Z" name="Add Customer Test" finished-at="2018-06-30T08:22:37Z" duration-ms="2759">
+    <test started-at="2018-06-30T08:50:56Z" name="Add Customer Test" finished-at="2018-06-30T08:50:59Z" duration-ms="2920">
       <class name="testcases.AddCustomerTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.AddCustomerTest@3d3ba765]" started-at="2018-06-30T11:22:27Z" name="setup" finished-at="2018-06-30T11:22:34Z" duration-ms="6660" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.AddCustomerTest@306851c7]" started-at="2018-06-30T11:50:50Z" name="setup" finished-at="2018-06-30T11:50:56Z" duration-ms="6058" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="addCustomer(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.AddCustomerTest@3d3ba765]" started-at="2018-06-30T11:22:34Z" name="addCustomer" data-provider="getData" finished-at="2018-06-30T11:22:37Z" duration-ms="2738" status="PASS">
+        <test-method signature="addCustomer(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.AddCustomerTest@306851c7]" started-at="2018-06-30T11:50:56Z" name="addCustomer" data-provider="getData" finished-at="2018-06-30T11:50:59Z" duration-ms="2901" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -45,7 +45,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomer -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testcases.AddCustomerTest@3d3ba765]" started-at="2018-06-30T11:22:37Z" name="teardown" finished-at="2018-06-30T11:22:38Z" duration-ms="1047" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testcases.AddCustomerTest@306851c7]" started-at="2018-06-30T11:50:59Z" name="teardown" finished-at="2018-06-30T11:51:00Z" duration-ms="981" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
