@@ -9,3 +9,4 @@ testcases\BankManagerLoginTest.class
 listeners\CustomListeners.class
 rough\TestProperties.class
 utils\ExtentManager.class
+utils\TestUtil.class
