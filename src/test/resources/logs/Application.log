@@ -46,3 +46,10 @@
 29/06/2018 23:20:05 devpinoyLogger Inside Login Test
 29/06/2018 23:20:05 devpinoyLogger Loggin Succesfully executed
 29/06/2018 23:20:13 devpinoyLogger test execution completed!!! 
+30/06/2018 11:22:27 devpinoyLogger config file loaded
+30/06/2018 11:22:27 devpinoyLogger Or file loaded
+30/06/2018 11:22:30 devpinoyLogger Chrome launched
+30/06/2018 11:22:33 devpinoyLogger Navigated to : http://way2automation.com/angularjs-protractor/banking/#/login
+30/06/2018 11:22:34 devpinoyLogger Inside Login Test
+30/06/2018 11:22:34 devpinoyLogger Loggin Succesfully executed
+30/06/2018 11:22:38 devpinoyLogger test execution completed!!! 
