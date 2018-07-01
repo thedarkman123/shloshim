@@ -1,12 +1,13 @@
 base\TestBase.class
-utils\MonitoringMail$1.class
+testcases\OpenAccountTest.class
 utils\MonitoringMail.class
 utils\ExcelReader.class
-testcases\AddCustomerTest.class
-utils\MonitoringMail$SMTPAuthenticator.class
 utils\TestConfig.class
 testcases\BankManagerLoginTest.class
 listeners\CustomListeners.class
 rough\TestProperties.class
+utils\MonitoringMail$1.class
+testcases\AddCustomerTest.class
+utils\MonitoringMail$SMTPAuthenticator.class
 utils\ExtentManager.class
 utils\TestUtil.class

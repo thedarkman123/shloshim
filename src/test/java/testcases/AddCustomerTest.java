@@ -8,17 +8,18 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import base.TestBase;
+import utils.TestUtil;
 
 public class AddCustomerTest extends TestBase {
 
 	
-	@Test(dataProvider="getData")
-	public void addCustomer(String firstName, String lastName,String postCode,String alertText) throws InterruptedException {
-		click("addCustBtn");
-		type("firstname",firstName);
-		type("lastname",lastName);
-		type("postcode",postCode);
-		click("addbtn");
+	@Test(dataProviderClass=TestUtil.class,dataProvider="dp")
+	public void addCustomerTest(String firstName, String lastName,String postCode,String alertText) throws InterruptedException {
+		click("addCustBtn_CSS");
+		type("firstname_CSS",firstName);
+		type("lastname_CSS",lastName);
+		type("postcode_CSS",postCode);
+		click("addbtn_CSS");
 		
 		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 		
@@ -27,22 +28,5 @@ public class AddCustomerTest extends TestBase {
 		Thread.sleep(2000);
 		
 		alert.accept();
-	}
-	
-	@DataProvider
-	public Object[][] getData(){
-		String sheetName = "AddCustomerTest";
-		int rows = excel.getRowCount(sheetName);
-		int cols = excel.getColumnCount(sheetName);
-		
-		Object[][] data = new Object[rows-1][cols];
-		
-		for (int rowNum = 2; rowNum<= rows; rowNum++) {
-			for (int colNum = 0; colNum < cols;colNum++) {
-				data[rowNum-2][colNum] = excel.getCellData(sheetName,colNum,rowNum);
-			}
-		}
-		
-		return data;
 	}
 }
