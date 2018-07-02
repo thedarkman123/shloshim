@@ -10,7 +10,8 @@ import base.TestBase;
 public class BankManagerLoginTest extends TestBase{
 	
 	@Test
-	public void loginAsBankManager() throws InterruptedException {
+	public void bankManagerLoginTest() throws InterruptedException {
+		checkToSkip();
 		//to handle the text as html
 		
 		log.debug("Inside Login Test");

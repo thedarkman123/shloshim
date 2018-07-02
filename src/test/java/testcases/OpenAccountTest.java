@@ -3,6 +3,7 @@ package testcases;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.SkipException;
 import org.testng.annotations.Test;
 
 import base.TestBase;
@@ -13,6 +14,7 @@ public class OpenAccountTest extends TestBase {
 	
 	@Test(dataProviderClass=TestUtil.class,dataProvider="dp")
 	public void openAccountTest(String customer, String currency) throws InterruptedException{
+		checkToSkip();
 		click("openaccount_CSS"); //step 1
 		select("customer_CSS",customer);
 		select("currency_CSS",currency);

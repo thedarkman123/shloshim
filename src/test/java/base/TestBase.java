@@ -21,6 +21,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.SkipException;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
@@ -50,6 +51,7 @@ public class TestBase {
 	public static WebDriverWait wait;
 	protected ExtentReports rep = ExtentManager.getInstance();
 	public static ExtentTest test;
+	public static String currentTestName;
 	
 	@BeforeSuite
 	public void setup() {
@@ -145,6 +147,13 @@ public class TestBase {
 		test.log(LogStatus.INFO, "selecting from dropdown: " + locator + ", the value: " + value);
 	}
 	
+	public void checkToSkip() {
+		//the current test name comes from the listener, assign to static var
+		if (!TestUtil.isTestRunnable(currentTestName,excel)) {
+			throw new SkipException("Skipping the test openAccountTest run mode is no");
+		}
+	}
+	
 	public void type(String locator, String value) {
 		if(locator.endsWith("_CSS")) {
 			driver.findElement(By.cssSelector(OR.getProperty(locator))).sendKeys(value);
@@ -154,6 +163,26 @@ public class TestBase {
 			driver.findElement(By.id(OR.getProperty(locator))).sendKeys(value);
 		}		
 		test.log(LogStatus.INFO, "typing in: " + locator + ", entered value as: " + value);
+	}
+	
+	public static boolean isTestRunnable(String testName, ExcelReader excel) {
+		String sheetName = "test_suite";
+		
+		int rows = excel.getRowCount(sheetName);
+		
+		for (int rNum = 2; rNum <= rows; rNum++) {
+			String testCase = excel.getCellData(sheetName, "TCID", rNum);
+			if(testCase.equalsIgnoreCase(testName)) {
+				String runmode = excel.getCellData(sheetName, "Runmode", rNum);
+				if (runmode.equals("Y")) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+		}
+		
+		return false;
 	}
 	
 	public static void verifyEquals(String expected,String actual) throws IOException {

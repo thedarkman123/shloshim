@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Add Customer Test"
-           tests="1"
+           tests="4"
            failures="0"
            errors="0"
-           skipped="0"
-           time="0.673">
+           skipped="4"
+           time="0.003">
   <properties />
   
+            <testcase name="addCustomerTest" time="0.0" classname="testcases.AddCustomerTest">
+          <skipped />
+    </testcase>
+            <testcase name="addCustomerTest" time="0.0" classname="testcases.AddCustomerTest">
+          <skipped />
+    </testcase>
+            <testcase name="addCustomerTest" time="0.0" classname="testcases.AddCustomerTest">
+          <skipped />
+    </testcase>
+            <testcase name="addCustomerTest" time="0.0" classname="testcases.AddCustomerTest">
+          <skipped />
+    </testcase>
   
-            <testcase name="addCustomerTest" time="0.673" classname="testcases.AddCustomerTest" />
-      
+  
 </testsuite>

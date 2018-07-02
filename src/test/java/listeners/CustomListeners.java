@@ -6,6 +6,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
+import org.testng.SkipException;
 
 import com.relevantcodes.extentreports.LogStatus;
 
@@ -21,7 +22,7 @@ public class CustomListeners extends TestBase implements ITestListener{
 
 	public void onStart(ITestContext arg0) {
 		// TODO Auto-generated method stub
-		test = rep.startTest(arg0.getName().toUpperCase());
+		
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult arg0) {
@@ -51,12 +52,16 @@ public class CustomListeners extends TestBase implements ITestListener{
 
 	public void onTestSkipped(ITestResult arg0) {
 		// TODO Auto-generated method stub
+		test.log(LogStatus.SKIP,arg0.getName().toUpperCase() + " Skipped the test, run mode is no");
+		rep.endTest(test);
+	    rep.flush();
 		
 	}
 
 	public void onTestStart(ITestResult arg0) {
 		// TODO Auto-generated method stub
-		
+		test = rep.startTest(arg0.getName().toUpperCase());
+		TestBase.currentTestName = arg0.getName();
 	}
 
 	public void onTestSuccess(ITestResult arg0) {

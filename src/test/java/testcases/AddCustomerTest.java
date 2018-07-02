@@ -17,7 +17,7 @@ public class AddCustomerTest extends TestBase {
 	
 	@Test(dataProviderClass=TestUtil.class,dataProvider="dp")
 	public void addCustomerTest(String firstName, String lastName,String postCode,String alertText) throws InterruptedException, IOException {
-		
+		checkToSkip();
 		click("addCustBtn_CSS");
 		type("firstname_CSS",firstName);
 		type("lastname_CSS",lastName);
