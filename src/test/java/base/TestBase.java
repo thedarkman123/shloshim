@@ -9,11 +9,18 @@ import java.util.concurrent.TimeUnit;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
@@ -23,6 +30,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 import utils.ExcelReader;
 import utils.ExtentManager;
+import utils.TestUtil;
 
 //initializors
 public class TestBase {
@@ -73,18 +81,19 @@ public class TestBase {
 				e.printStackTrace();
 			}
 		}
-		
+		DesiredCapabilities dc = new DesiredCapabilities();
+		dc.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
 		if (config.getProperty("browser").equals("firefox")) {
 			//add in case working with selenium 3 build
 			System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\geckodriver.exe");
-			driver = new FirefoxDriver();
+			driver = new FirefoxDriver(dc);
 		} else if(config.getProperty("browser").equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\chromedriver.exe");
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(dc);
 			log.debug("Chrome launched");
 		} else {
 			System.setProperty("webdriver.ie.driver",System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\IEDriverServer.exe");
-			driver = new InternetExplorerDriver();
+			driver = new InternetExplorerDriver(dc);
 		}
 		
 		String testSiteUrl = config.getProperty("testsiteurl");
@@ -120,6 +129,22 @@ public class TestBase {
 		test.log(LogStatus.INFO, "Clicking on: " + locator);
 	}
 	
+	static WebElement dropdown;
+	
+	public void select(String locator, String value) {
+		if(locator.endsWith("_CSS")) {
+			dropdown = driver.findElement(By.cssSelector(OR.getProperty(locator)));
+		} else if (locator.endsWith("_XPATH")) {
+			dropdown = driver.findElement(By.xpath(OR.getProperty(locator)));
+		} else if (locator.endsWith("_ID")) {
+			dropdown = driver.findElement(By.id(OR.getProperty(locator)));
+		}
+		
+		Select select = new Select(dropdown);
+		select.selectByVisibleText(value);
+		test.log(LogStatus.INFO, "selecting from dropdown: " + locator + ", the value: " + value);
+	}
+	
 	public void type(String locator, String value) {
 		if(locator.endsWith("_CSS")) {
 			driver.findElement(By.cssSelector(OR.getProperty(locator))).sendKeys(value);
@@ -130,6 +155,21 @@ public class TestBase {
 		}		
 		test.log(LogStatus.INFO, "typing in: " + locator + ", entered value as: " + value);
 	}
+	
+	public static void verifyEquals(String expected,String actual) throws IOException {
+		try {
+			Assert.assertEquals(expected, actual);
+		} catch (Throwable t) {
+			TestUtil.captureScreenshot();
+			Reporter.log("<br> Verifcation failure:" + t.getMessage()+"</br>");
+			Reporter.log("<a target=\"_blank\" href=\""+ TestUtil.screenshotName + "\"><img src=\""+ TestUtil.screenshotName + "\" width=200 height=200 ></a>");
+			Reporter.log("<br>");
+			Reporter.log("<br>");
+			test.log(LogStatus.FAIL, "Verification failed with exception: " + t.getMessage().toUpperCase());
+			test.log(LogStatus.FAIL,test.addScreenCapture(TestUtil.screenshotName));
+		}
+	}
+	
 	
 	@AfterSuite
 	public void teardown() {

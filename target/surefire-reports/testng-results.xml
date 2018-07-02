@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Data Driven Basics" duration-ms="3372" started-at="2018-07-01T14:17:49Z" finished-at="2018-07-01T14:17:53Z">
+  <suite name="Data Driven Basics" duration-ms="4137" started-at="2018-07-02T10:07:16Z" finished-at="2018-07-02T10:07:20Z">
     <groups>
     </groups>
-    <test name="Bank Manager Login Test" duration-ms="611" started-at="2018-07-01T14:17:49Z" finished-at="2018-07-01T14:17:50Z">
+    <test name="Bank Manager Login Test" duration-ms="633" started-at="2018-07-02T10:07:16Z" finished-at="2018-07-02T10:07:17Z">
       <class name="testcases.BankManagerLoginTest">
-        <test-method status="PASS" signature="loginAsBankManager()[pri:0, instance:testcases.BankManagerLoginTest@41fecb8b]" name="loginAsBankManager" duration-ms="295" started-at="2018-07-01T17:17:49Z" finished-at="2018-07-01T17:17:50Z">
+        <test-method status="PASS" signature="loginAsBankManager()[pri:0, instance:testcases.BankManagerLoginTest@73700b80]" name="loginAsBankManager" duration-ms="287" started-at="2018-07-02T13:07:16Z" finished-at="2018-07-02T13:07:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAsBankManager -->
       </class> <!-- testcases.BankManagerLoginTest -->
     </test> <!-- Bank Manager Login Test -->
-    <test name="Add Customer Test" duration-ms="2732" started-at="2018-07-01T14:17:50Z" finished-at="2018-07-01T14:17:53Z">
+    <test name="Add Customer Test" duration-ms="761" started-at="2018-07-02T10:07:17Z" finished-at="2018-07-02T10:07:18Z">
       <class name="testcases.AddCustomerTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.AddCustomerTest@57af006c]" name="setup" is-config="true" duration-ms="6333" started-at="2018-07-01T17:17:43Z" finished-at="2018-07-01T17:17:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="addCustomerTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.AddCustomerTest@57af006c]" name="addCustomerTest" duration-ms="2638" started-at="2018-07-01T17:17:50Z" data-provider="dp" finished-at="2018-07-01T17:17:53Z">
+        <test-method status="PASS" signature="addCustomerTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.AddCustomerTest@32ee6fee]" name="addCustomerTest" duration-ms="673" started-at="2018-07-02T13:07:17Z" data-provider="dp" finished-at="2018-07-02T13:07:17Z">
           <params>
             <param index="0">
               <value>
@@ -45,11 +41,35 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomerTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.AddCustomerTest@57af006c]" name="teardown" is-config="true" duration-ms="895" started-at="2018-07-01T17:17:53Z" finished-at="2018-07-01T17:17:54Z">
+      </class> <!-- testcases.AddCustomerTest -->
+    </test> <!-- Add Customer Test -->
+    <test name="Open Account Test" duration-ms="2694" started-at="2018-07-02T10:07:18Z" finished-at="2018-07-02T10:07:20Z">
+      <class name="testcases.OpenAccountTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.OpenAccountTest@f736069]" name="setup" is-config="true" duration-ms="6638" started-at="2018-07-02T13:07:09Z" finished-at="2018-07-02T13:07:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="openAccountTest(java.lang.String, java.lang.String)[pri:0, instance:testcases.OpenAccountTest@f736069]" name="openAccountTest" duration-ms="2652" started-at="2018-07-02T13:07:18Z" data-provider="dp" finished-at="2018-07-02T13:07:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[benny refaelov]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Rupee]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openAccountTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.OpenAccountTest@f736069]" name="teardown" is-config="true" duration-ms="979" started-at="2018-07-02T13:07:20Z" finished-at="2018-07-02T13:07:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- testcases.AddCustomerTest -->
-    </test> <!-- Add Customer Test -->
+      </class> <!-- testcases.OpenAccountTest -->
+    </test> <!-- Open Account Test -->
   </suite> <!-- Data Driven Basics -->
 </testng-results>

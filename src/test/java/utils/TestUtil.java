@@ -30,7 +30,6 @@ public class TestUtil extends TestBase {
 	@DataProvider(name="dp")
 	public Object[][] getData(Method m){
 		String sheetName = m.getName();
-		System.out.println("#######"+sheetName);
 		int rows = excel.getRowCount(sheetName);
 		int cols = excel.getColumnCount(sheetName);
 		
