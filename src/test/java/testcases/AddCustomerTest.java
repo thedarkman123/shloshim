@@ -6,6 +6,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.SkipException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -16,8 +17,11 @@ public class AddCustomerTest extends TestBase {
 
 	
 	@Test(dataProviderClass=TestUtil.class,dataProvider="dp")
-	public void addCustomerTest(String firstName, String lastName,String postCode,String alertText) throws InterruptedException, IOException {
+	public void addCustomerTest(String firstName, String lastName,String postCode,String alertText,String runmode) throws InterruptedException, IOException {
 		checkToSkip();
+		if (!runmode.equalsIgnoreCase("y")) {
+			throw new SkipException("Skipping the info addCustomerTest run mode is no");
+		}
 		click("addCustBtn_CSS");
 		type("firstname_CSS",firstName);
 		type("lastname_CSS",lastName);

@@ -15,6 +15,7 @@ public class OpenAccountTest extends TestBase {
 	@Test(dataProviderClass=TestUtil.class,dataProvider="dp")
 	public void openAccountTest(String customer, String currency) throws InterruptedException{
 		checkToSkip();
+		
 		click("openaccount_CSS"); //step 1
 		select("customer_CSS",customer);
 		select("currency_CSS",currency);
