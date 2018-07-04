@@ -1,5 +1,7 @@
 package testcases;
 
+import java.util.Hashtable;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
@@ -13,14 +15,12 @@ public class OpenAccountTest extends TestBase {
 
 	
 	@Test(dataProviderClass=TestUtil.class,dataProvider="dp")
-	public void openAccountTest(String customer, String currency) throws InterruptedException{
+	public void openAccountTest(Hashtable <String,String> data) throws InterruptedException{
 		checkToSkip();
-		
 		click("openaccount_CSS"); //step 1
-		select("customer_CSS",customer);
-		select("currency_CSS",currency);
+		select("customer_CSS",data.get("customer"));
+		select("currency_CSS",data.get("currency"));
 		click("process_CSS");
-		Thread.sleep(2000);
 		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 		alert.accept();
 	}

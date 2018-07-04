@@ -1,6 +1,7 @@
 package testcases;
 
 import java.io.IOException;
+import java.util.Hashtable;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -17,21 +18,20 @@ public class AddCustomerTest extends TestBase {
 
 	
 	@Test(dataProviderClass=TestUtil.class,dataProvider="dp")
-	public void addCustomerTest(String firstName, String lastName,String postCode,String alertText,String runmode) throws InterruptedException, IOException {
+	public void addCustomerTest(Hashtable <String,String> data) throws InterruptedException, IOException {
 		checkToSkip();
-		if (!runmode.equalsIgnoreCase("y")) {
+		if (!data.get("runmode").equalsIgnoreCase("y")) {
 			throw new SkipException("Skipping the info addCustomerTest run mode is no");
 		}
 		click("addCustBtn_CSS");
-		type("firstname_CSS",firstName);
-		type("lastname_CSS",lastName);
-		type("postcode_CSS",postCode);
-		//verifyEquals("ddd", "ggg");
+		type("firstname_CSS",data.get("firstName"));
+		type("lastname_CSS",data.get("lastName"));
+		type("postcode_CSS",data.get("postcode"));
 		click("addbtn_CSS");
 		
 		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 		
-		Assert.assertTrue(alert.getText().contains(alertText));
+		Assert.assertTrue(alert.getText().contains(data.get("alerttext")));
 		
 		alert.accept();
 	}

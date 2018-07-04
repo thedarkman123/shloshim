@@ -2,137 +2,57 @@
 <testng-results skipped="1" failed="0" ignored="0" total="6" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Data Driven Basics" duration-ms="5020" started-at="2018-07-03T10:27:09Z" finished-at="2018-07-03T10:27:14Z">
+  <suite name="Data Driven Basics" duration-ms="2930" started-at="2018-07-04T10:11:55Z" finished-at="2018-07-04T10:11:58Z">
     <groups>
     </groups>
-    <test name="Bank Manager Login Test" duration-ms="640" started-at="2018-07-03T10:27:09Z" finished-at="2018-07-03T10:27:09Z">
+    <test name="Bank Manager Login Test" duration-ms="614" started-at="2018-07-04T10:11:55Z" finished-at="2018-07-04T10:11:56Z">
       <class name="testcases.BankManagerLoginTest">
-        <test-method status="PASS" signature="bankManagerLoginTest()[pri:0, instance:testcases.BankManagerLoginTest@483f6d77]" name="bankManagerLoginTest" duration-ms="307" started-at="2018-07-03T13:27:09Z" finished-at="2018-07-03T13:27:09Z">
+        <test-method status="PASS" signature="bankManagerLoginTest()[pri:0, instance:testcases.BankManagerLoginTest@483f6d77]" name="bankManagerLoginTest" duration-ms="296" started-at="2018-07-04T13:11:55Z" finished-at="2018-07-04T13:11:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bankManagerLoginTest -->
       </class> <!-- testcases.BankManagerLoginTest -->
     </test> <!-- Bank Manager Login Test -->
-    <test name="Add Customer Test" duration-ms="1632" started-at="2018-07-03T10:27:09Z" finished-at="2018-07-03T10:27:11Z">
+    <test name="Add Customer Test" duration-ms="1586" started-at="2018-07-04T10:11:56Z" finished-at="2018-07-04T10:11:58Z">
       <class name="testcases.AddCustomerTest">
-        <test-method status="PASS" signature="addCustomerTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.AddCustomerTest@6da21078]" name="addCustomerTest" duration-ms="730" started-at="2018-07-03T13:27:09Z" data-provider="dp" finished-at="2018-07-03T13:27:10Z">
+        <test-method status="PASS" signature="addCustomerTest(java.util.Hashtable)[pri:0, instance:testcases.AddCustomerTest@6da21078]" name="addCustomerTest" duration-ms="671" started-at="2018-07-04T13:11:56Z" data-provider="dp" finished-at="2018-07-04T13:11:57Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[benny]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[refaelov]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[602010.0]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Customer added successfully]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Y]]>
+                <![CDATA[{alerttext=Customer added successfully, postcode=602010.0, lastName=refaelov, firstName=benny, runmode=Y}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomerTest -->
-        <test-method status="PASS" signature="addCustomerTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.AddCustomerTest@6da21078]" name="addCustomerTest" duration-ms="331" started-at="2018-07-03T13:27:10Z" data-provider="dp" finished-at="2018-07-03T13:27:11Z">
+        <test-method status="PASS" signature="addCustomerTest(java.util.Hashtable)[pri:0, instance:testcases.AddCustomerTest@6da21078]" name="addCustomerTest" duration-ms="356" started-at="2018-07-04T13:11:57Z" data-provider="dp" finished-at="2018-07-04T13:11:57Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[george]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[hovel]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[134123.0]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Customer added successfully]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Y]]>
+                <![CDATA[{alerttext=Customer added successfully, postcode=134123.0, lastName=hovel, firstName=george, runmode=Y}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomerTest -->
-        <test-method status="PASS" signature="addCustomerTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.AddCustomerTest@6da21078]" name="addCustomerTest" duration-ms="352" started-at="2018-07-03T13:27:11Z" data-provider="dp" finished-at="2018-07-03T13:27:11Z">
+        <test-method status="PASS" signature="addCustomerTest(java.util.Hashtable)[pri:0, instance:testcases.AddCustomerTest@6da21078]" name="addCustomerTest" duration-ms="325" started-at="2018-07-04T13:11:57Z" data-provider="dp" finished-at="2018-07-04T13:11:58Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ariel ]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[nektalov]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[601112.0]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Customer added successfully]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Y]]>
+                <![CDATA[{alerttext=Customer added successfully, postcode=601112.0, lastName=nektalov, firstName=ariel , runmode=Y}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomerTest -->
-        <test-method status="SKIP" signature="addCustomerTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.AddCustomerTest@6da21078]" name="addCustomerTest" duration-ms="1" started-at="2018-07-03T13:27:11Z" data-provider="dp" finished-at="2018-07-03T13:27:11Z">
+        <test-method status="SKIP" signature="addCustomerTest(java.util.Hashtable)[pri:0, instance:testcases.AddCustomerTest@6da21078]" name="addCustomerTest" duration-ms="1" started-at="2018-07-04T13:11:58Z" data-provider="dp" finished-at="2018-07-04T13:11:58Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[inbal]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[matmon]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[123456.0]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Customer added successfully]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[N]]>
+                <![CDATA[{alerttext=Customer added successfully, postcode=123456.0, lastName=matmon, firstName=inbal, runmode=N}]]>
               </value>
             </param>
           </params>
@@ -142,7 +62,7 @@
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: Skipping the info addCustomerTest run mode is no
-	at testcases.AddCustomerTest.addCustomerTest(AddCustomerTest.java:23)
+	at testcases.AddCustomerTest.addCustomerTest(AddCustomerTest.java:24)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -179,29 +99,24 @@
         </test-method> <!-- addCustomerTest -->
       </class> <!-- testcases.AddCustomerTest -->
     </test> <!-- Add Customer Test -->
-    <test name="Open Account Test" duration-ms="2676" started-at="2018-07-03T10:27:11Z" finished-at="2018-07-03T10:27:14Z">
+    <test name="Open Account Test" duration-ms="673" started-at="2018-07-04T10:11:58Z" finished-at="2018-07-04T10:11:58Z">
       <class name="testcases.OpenAccountTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.OpenAccountTest@169e6180]" name="setup" is-config="true" duration-ms="6494" started-at="2018-07-03T13:27:02Z" finished-at="2018-07-03T13:27:09Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.OpenAccountTest@169e6180]" name="setup" is-config="true" duration-ms="6032" started-at="2018-07-04T13:11:49Z" finished-at="2018-07-04T13:11:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="openAccountTest(java.lang.String, java.lang.String)[pri:0, instance:testcases.OpenAccountTest@169e6180]" name="openAccountTest" duration-ms="2634" started-at="2018-07-03T13:27:11Z" data-provider="dp" finished-at="2018-07-03T13:27:14Z">
+        <test-method status="PASS" signature="openAccountTest(java.util.Hashtable)[pri:0, instance:testcases.OpenAccountTest@169e6180]" name="openAccountTest" duration-ms="614" started-at="2018-07-04T13:11:58Z" data-provider="dp" finished-at="2018-07-04T13:11:58Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[benny refaelov]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Rupee]]>
+                <![CDATA[{currency=Rupee, customer=benny refaelov}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openAccountTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.OpenAccountTest@169e6180]" name="teardown" is-config="true" duration-ms="958" started-at="2018-07-03T13:27:14Z" finished-at="2018-07-03T13:27:15Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.OpenAccountTest@169e6180]" name="teardown" is-config="true" duration-ms="900" started-at="2018-07-04T13:11:58Z" finished-at="2018-07-04T13:11:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
